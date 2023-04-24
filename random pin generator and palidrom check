@@ -1,0 +1,26 @@
+import random
+import string
+letters = string.ascii_letters
+numbers= string.digits
+password=""
+count=0
+
+def pass_generator(password):
+    for i in range (0, 5):
+        password+=random.choice(numbers+letters)
+    return password
+
+def is_palidrom(string):
+      lowr=string.lower()
+      return lowr==lowr[::-1]
+      
+
+def main():
+    data=pass_generator(password)
+    check=is_palidrom(data)
+    return check
+
+while main()==False:
+    main()
+    count+=1
+    print(count)
