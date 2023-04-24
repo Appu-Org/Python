@@ -1,0 +1,24 @@
+class Calc():
+     def __init__(self,a,b,c):
+         self.a=a
+         self.b=b
+         self.c=c
+         print("def __init__")
+         
+     def sum1(self):
+         sum11=self.a+self.b+ self.sub()
+         print("def sum1")
+         print(sum11)
+         return sum11
+     def sub(self):
+         sum1=self.a-self.b
+         return sum1
+def main():
+    a=10
+    b=5
+    c=15
+    calculator=Calc(a,b,c)
+    calculator.sum1()
+    
+if __name__ == '__main__':
+    main()
