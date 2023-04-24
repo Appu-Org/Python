@@ -1,0 +1,15 @@
+data="KA23Z8473"
+result1=''.join(char for char in data if char.isalpha())
+result2=''.join(char for char in data if char.isnumeric())
+
+
+def seperate_num_char(data):
+    sort=sorted(data)
+    print(sort)
+    # new_str = ''.join(char for char in data if char.isalnum())
+    new_str = ''.join(filter(str.isalnum, sort))
+    return new_str[::-1]
+result=seperate_num_char(data)
+
+print(result1+result2)
+        
